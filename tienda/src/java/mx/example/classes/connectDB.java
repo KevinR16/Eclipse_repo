@@ -23,8 +23,6 @@ public class connectDB {
 			Class.forName("com.mysql.jdbc.Driver");
 			url = "jdbc:mysql://" + host + ":" + port + "/" + database;
 			connection = DriverManager.getConnection(url, user, password);
-//			boolean valid = connection.isValid(50000);
-//			System.out.println(valid ? "TEST OK" : "TEST FAIL");
 		} catch (java.sql.SQLException sqle) {
 			System.out.println("Error al conectar con la base de datos (" + url + "): " + sqle);
 		}catch (ClassNotFoundException ex) {
